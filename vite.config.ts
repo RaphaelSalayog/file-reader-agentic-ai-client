@@ -6,6 +6,10 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
     server: {
-        port: 3001,
+        watch: {
+            usePolling: true, // fix for docker. Use polling to watch for file changes (Bind Mount)
+        },
+        host: true, // fix for docker. 'true' or '0.0.0.0' exposes the project on the local network.
+        port: 3000,
     },
 });
