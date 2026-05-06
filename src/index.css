@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.multi-line-truncate {
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ant-btn,
+.ant-btn span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ant-upload,
+.ant-input-number {
+    width: 100% !important;
+}
+
+.ant-collapse-header {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.ant-collapse-expand-icon {
+    display: flex;
+    align-items: center;
+}
+
+.ant-collapse-header-text {
+    display: flex;
+    align-items: center;
+}
